@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4662145247484556}
   - component: {fileID: 23322756865954512}
   - component: {fileID: 102853294870837052}
+  - component: {fileID: 114002748137639280}
   m_Layer: 0
   m_Name: Bang
   m_TagString: Untagged
@@ -96,3 +97,16 @@ TextMesh:
   m_Color:
     serializedVersion: 2
     rgba: 4278227711
+--- !u!114 &114002748137639280
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1518224300674762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0aa330996e84c8468666fb489e00b5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0.03
+  max: 50
