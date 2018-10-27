@@ -17,6 +17,7 @@ public class TextInput : MonoBehaviour {
     private void AcceptStringInput(string userInput)
     {
         userInput = userInput.ToLower();
+        Debug.Log(userInput);
         InputComplete();
     }
 

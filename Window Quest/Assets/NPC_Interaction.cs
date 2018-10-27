@@ -8,6 +8,7 @@ public class NPC_Interaction : MonoBehaviour {
     public string Name = "NPC";
     public string Prompt = "FLAG";
     public string Success = ":)";
+    public int flag = 0;
 
     private Text title_text;
     private Text body_text;
