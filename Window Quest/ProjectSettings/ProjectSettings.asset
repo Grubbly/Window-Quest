@@ -640,11 +640,12 @@ PlayerSettings:
     daydream:
       daydreamIconForeground: {fileID: 0}
       daydreamIconBackground: {fileID: 0}
-  cloudServicesEnabled: {}
+  cloudServicesEnabled:
+    UNet: 1
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
   cloudProjectId: e254a08a-ad37-4749-8255-57c7512d6e38
-  projectName: 
+  projectName: Window Quest
   organizationId: grubsy-studio
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0

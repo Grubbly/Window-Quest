@@ -5,9 +5,14 @@ using UnityEngine;
 public class windowControl : MonoBehaviour {
 
     public GameObject window;
+    public bool active = false;
 
-    private void Awake()
+    private void Update()
     {
-        window.SetActive(false);
+        if (active)
+        {
+            gameObject.SetActive(true);
+            active = !active;
+        }
     }
 }
