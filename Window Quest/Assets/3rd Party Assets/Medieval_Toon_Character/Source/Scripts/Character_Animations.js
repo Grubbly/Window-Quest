@@ -2,7 +2,8 @@
 internal var animator:Animator;
 var v:float;
 var h:float;
-var run:float;
+var run: float;
+var speed: float = 0.2;
 
 function Start () {
 	animator=GetComponent (Animator);
@@ -11,7 +12,7 @@ function Start () {
 function Update () {
 	v=Input.GetAxis("Vertical");
 	h=Input.GetAxis("Horizontal");
-	if (animator.GetFloat("Run")==0.2){
+	if (animator.GetFloat("Run")==speed){
 		if (Input.GetKeyDown("space")){
 			animator.SetBool("Jump",true);
 		}
@@ -28,7 +29,7 @@ function FixedUpdate (){
 
 function Sprinting(){
 	if (Input.GetKey(KeyCode.LeftShift)){
-		run=0.2;
+		run=speed;
 	}
 	else
 	{
