@@ -10,18 +10,57 @@ with Active Directory. Active Directory handles a large majority of domain contr
 Topics:
 
 * Creating users
+    * ```win+r + "dsa.msc"```
+    * Select Users folder in domain
+    * Right click in right panel -> New -> User
+
 * Creating groups
+    * ```win+r + "dsa.msc"```
+    * Select Users folder in domain
+    * Right click in right panel -> New -> Group
+  
 * Deleting users
+    * ```win+r + "dsa.msc"```
+    * Select Users folder in domain
+    * Right click user -> Delete
+
 * Deleting groups
+    * ```win+r + "dsa.msc"```
+    * Select Users folder in domain
+    * Right click group -> Delete
+  
 * Disabling users
+    * ```win+r + "dsa.msc"```
+    * Select Users folder in domain
+    * Right click user -> Disable Account
+
 * Moving users to groups
+    * ```win+r + "dsa.msc"```
+    * Select Users folder in domain
+    * Right click user -> Add to a group... -> Type group name -> click Check Names -> Ok
+
 * Fixing locked accounts
+    * ```win+r + "dsa.msc"```
+    * Select Users folder in domain
+    * Right click user -> Properties -> Account -> Check Unlock account
+
 * Verifying accounts
+    * Ask the user to verify information you find about them under their Account tab
+
 * Password resets
-* Organizational units (OUs)
+    * ```win+r + "dsa.msc"```
+    * Select Users folder in domain
+    * Right click user -> Reset Password...
+
 * Shared folders
+    * Remotely accessable folders
+
 * Builtin
+    * The set of essential user groups default defined by Active Directory Users and Computers
+
 * Computers
+    * Other computers nested within the domain (none for this lab)
+
 
 ## Event Viewer
 
@@ -29,6 +68,12 @@ Event viewer is where you will find entries for windows logs about various event
 
 **Group** **Policy** - Centralized management tool for application and user permissions.
 
+Open up Group Policy Management:
+```powershell
+win+r + gpmc.msc
+```
+
+Force Group Policy To Update:
 ```powershell
 PS:\> GPUpdate /force
 ```
@@ -41,3 +86,8 @@ PS:\> GPUpdate /force
 
 Windows uses access control lists (ACLs) to keep track of which users/groups are able to perform certain operation on a file or directory. Event viewer will only tell
 you a file was handled, it will not give you specifics about the action taken (i.e. it will not tell you if a file was read, written, or executed). Therefore, when establishing permissions on a file, it is best practice to set only the modes that matter.
+
+![File Permissions](filePermissions.PNG)
+
+* Left window: right click file -> Properties -> Security
+* Right window: right click file -> Properties -> Security -> Advanced -> Owner
